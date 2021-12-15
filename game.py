@@ -105,8 +105,9 @@ class Game:
             print("No winners! Everyone loses the game.\n")
             return
         max_score = max([player.score for player in potential_winners])
-        winners = list(map(lambda player: player.player_name,
-                           filter(lambda player: player.score == max_score, potential_winners)))
+        winners = [player.player_name for player in potential_winners if player.score = max_score]
+        # winners = list(map(lambda player: player.player_name,
+        #                    filter(lambda player: player.score == max_score, potential_winners)))
         print("\n************ GAME RESULT ************")
         print("WINNER(S): " + ", ".join(winners) + '\n')
 
